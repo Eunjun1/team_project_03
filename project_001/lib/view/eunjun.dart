@@ -8,7 +8,7 @@ class EjScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 224, 235),
       appBar: AppBar(
-        title: Text("조장이란", style: TextStyle(fontWeight: FontWeight.bold)),
+        title: Text("Who is 조장", style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Colors.pinkAccent,
         foregroundColor: Colors.white,
       ),
@@ -56,18 +56,40 @@ class EjScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: ElevatedButton(
-                onPressed: () => Navigator.pop(context),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.popAndPushNamed(context, '/MS'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    child: Text(
+                      "메인으로",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                  ),
                 ),
-                child: Text(
-                  "메인으로",
-                  style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.popAndPushNamed(context, '/JW'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    child: Text(
+                      "다음 멤버",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ],
         ),

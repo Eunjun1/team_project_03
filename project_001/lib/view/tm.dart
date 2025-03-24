@@ -20,7 +20,8 @@ class TmScreen extends StatelessWidget {
               CircleAvatar(
                 backgroundImage: AssetImage('images/jjanggu.jpeg'),
                 backgroundColor: const Color.fromARGB(255, 163, 104, 188),
-              radius: 100),
+                radius: 100,
+              ),
               Divider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -188,16 +189,73 @@ class TmScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
-                child: OutlinedButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: Text('메인으로',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black
-                  ),),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ElevatedButton(
+                      onPressed:
+                          () => Navigator.popAndPushNamed(context, '/JW'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          255,
+                          255,
+                          255,
+                        ),
+                      ),
+                      child: Text(
+                        "이전 멤버",
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ElevatedButton(
+                      onPressed:
+                          () => Navigator.popAndPushNamed(context, '/MS'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          255,
+                          255,
+                          255,
+                        ),
+                      ),
+                      child: Text(
+                        "메인으로",
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ElevatedButton(
+                      onPressed:
+                          () => Navigator.popAndPushNamed(context, '/JH'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          255,
+                          255,
+                          255,
+                        ),
+                      ),
+                      child: Text(
+                        "다음 멤버",
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
