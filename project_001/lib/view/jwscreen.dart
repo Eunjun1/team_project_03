@@ -10,10 +10,7 @@ class JwScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           '김재원 자기소개',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         backgroundColor: Colors.brown,
       ),
@@ -22,45 +19,29 @@ class JwScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'images/맹구.jpeg',
+              'images/manggu_copy.jpeg',
               width: 300,
               fit: BoxFit.contain,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Divider(
-                height: 10,
-                thickness: 1,
-                color: Colors.black,
-              ),
+              child: Divider(height: 10, thickness: 1, color: Colors.black),
             ),
             Text(
               '이름 : 김재원',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             Text(
               '성별 : 남자',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             Text(
               '나이 : 24',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             Text(
               '거주지 : 경기도 군포시',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,  
-              ),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20.0),
@@ -76,16 +57,11 @@ class JwScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 60.0),
               child: FilledButton(
-                onPressed: () => Navigator.pop(context), 
-                style: FilledButton.styleFrom(
-                  backgroundColor: Colors.brown,
-                ),
+                onPressed: () => Navigator.pop(context),
+                style: FilledButton.styleFrom(backgroundColor: Colors.brown),
                 child: Text(
                   '다른사람 소개보기',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
