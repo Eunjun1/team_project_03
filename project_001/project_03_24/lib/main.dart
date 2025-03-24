@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_03_24/view/eunjun.dart';
+import 'package:project_03_24/view/jwscreen.dart';
 import 'package:project_03_24/view/main%20screen.dart';
 
 void main() {
@@ -20,10 +20,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/main': (context) => Mainscreen(),
         '/EJ': (context) => EjScreen(),
-        /*'/JW': (context) => JwScreen(),
+        '/JW': (context) => JwScreen(),
         '/TM': (context) => TmScreen(),
         '/JH': (context) => JHScreen(),
-        '/SB': (context) => SbScreen(),*/
+        '/SB': (context) => SbScreen(),
       },
     );
   }
