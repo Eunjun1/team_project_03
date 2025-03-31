@@ -17,12 +17,26 @@ class _Pkmno443nameState extends State<Pkmno443Main> {
   late double heightPosition3;
   late double height1;
   late double height2;
+  late List<String> pkmImg;
+  late List<String> pkmName;
+  late int current;
+  late Timer timer1;
 
   @override
   void initState() {
     super.initState();
+    timer1 = Timer.periodic(Duration(), (timer) {});
     height1 = 0;
     height2 = 0;
+    pkmImg = ['443.webp', '444.webp', '445.webp'];
+    pkmName = ['딥상어동', '한바이트', '한카리아스'];
+    current = 0;
+  }
+
+  @override
+  void dispose() {
+    timer1.cancel();
+    super.dispose();
   }
 
   @override
@@ -40,17 +54,21 @@ class _Pkmno443nameState extends State<Pkmno443Main> {
       body: Center(
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               height: 800,
               width: 600,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('images/443.webp', width: 300, height: 300),
+                  Image.asset(
+                    'images/${pkmImg[current]}',
+                    width: 300,
+                    height: 300,
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(30.0),
                     child: Text(
-                      '딥상어동',
+                      pkmName[current],
                       style: TextStyle(color: Colors.white, fontSize: 40),
                     ),
                   ),
@@ -61,7 +79,7 @@ class _Pkmno443nameState extends State<Pkmno443Main> {
                       ),
                       backgroundColor: Colors.red,
                     ),
-                    onPressed: () => Navigator.pushNamed(context, '/no443'),
+                    onPressed: () => {Navigator.pushNamed(context, '/no443')},
                     child: Text(
                       '도감 열기',
                       style: TextStyle(color: Colors.white, fontSize: 40),
@@ -92,7 +110,7 @@ class _Pkmno443nameState extends State<Pkmno443Main> {
             Positioned(
               left: widthPosition2,
               top: heightPosition3,
-              child: Container(
+              child: SizedBox(
                 height: 100,
                 width: 100,
                 child: IconButton(
@@ -108,12 +126,20 @@ class _Pkmno443nameState extends State<Pkmno443Main> {
   }
 
   onClick() {
-    Timer.periodic(Duration(milliseconds: 15), (timer) {
+    Timer.periodic(Duration(milliseconds: 17), (timer) {
       height1 += 10;
       height2 -= 10;
 
       if (height1 == 500) {
         timer.cancel();
+      }
+      setState(() {});
+    });
+
+    timer1 = Timer.periodic(Duration(seconds: 2), (timer) {
+      current++;
+      if (current >= pkmImg.length) {
+        current = 0;
       }
       setState(() {});
     });

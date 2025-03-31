@@ -102,11 +102,14 @@ class _ShowhomeState extends State<Showhome>
           controller: controller,
 
           tabs: [
-            Tab(icon: Image.asset('images/396.webp', width: 30), height: 60),
-            Tab(icon: Image.asset('images/092.png', width: 30)),
-            Tab(icon: Image.asset('images/004.webp', width: 30)),
-            Tab(icon: Image.asset('images/443.webp', width: 30)),
-            Tab(icon: Image.asset('images/066.png', width: 30)),
+            Tab(
+              icon: Image.asset('images/396small.webp', width: 30),
+              height: 60,
+            ),
+            Tab(icon: Image.asset('images/092small.webp', width: 30)),
+            Tab(icon: Image.asset('images/004small.webp', width: 30)),
+            Tab(icon: Image.asset('images/443small.webp', width: 30)),
+            Tab(icon: Image.asset('images/066small.webp', width: 30)),
           ],
         ),
       ),
