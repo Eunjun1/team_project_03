@@ -38,6 +38,24 @@ class MyApp extends StatelessWidget {
         // '/no' : (context) => , // 5tab
         // '/no' : (context) => ,
         // '/no' : (context) => ,
+        '/no004' : (context) => Pkmno004(), // 3tab
+        '/no005' : (context) => Pkmno005(),
+        '/no006' : (context) => Pkmno006(),
+        // '/no' : (context) => , // 4tab
+        // '/no' : (context) => ,
+        // '/no' : (context) => ,
+        // '/no' : (context) => , // 5tab
+        // '/no' : (context) => ,
+        // '/no' : (context) => ,
+
+
+
+
+
+      
+      
+      
+      
       },
     );
   }
