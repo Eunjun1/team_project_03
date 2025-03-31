@@ -18,11 +18,7 @@ class JHScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(30.0),
-              child: Image.asset(
-                'images/cat.jpg',
-                width: 200,
-                height: 200,
-              ),
+              child: Image.asset('images/cat.jpg', width: 200, height: 200),
             ),
             //Divider(color: const Color.fromARGB(255, 181, 74, 3)),
             Padding(
@@ -68,7 +64,7 @@ class JHScreen extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-            ),           
+            ),
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Text(
@@ -91,11 +87,57 @@ class JHScreen extends StatelessWidget {
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('메인으로'),
+            SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.popAndPushNamed(context, '/TM'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    child: Text(
+                      "이전 멤버",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.popAndPushNamed(context, '/MS'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    child: Text(
+                      "메인으로",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.popAndPushNamed(context, '/SB'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    child: Text(
+                      "다음 멤버",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

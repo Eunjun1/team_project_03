@@ -1,11 +1,12 @@
-
 import 'package:flutter/material.dart';
+import 'package:project_03_24/view/eunjun.dart';
+import 'package:project_03_24/view/jwscreen.dart';
 import 'package:project_03_24/view/main%20screen.dart';
+import 'package:project_03_24/view/mainpage.dart';
+import 'package:project_03_24/view/sungbae.dart';
+import 'package:project_03_24/view/tm.dart';
 
 import 'view/jhscreen.dart';
-import 'view/jwscreen.dart';
-import 'view/sungbae.dart';
-import 'view/tm.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,14 +18,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '3조 조원 소개시간',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       initialRoute: '/main',
       routes: {
-        '/main': (context) => Mainscreen(),
-        // '/EJ': (context) => EjScreen(),
+        '/main': (context) => MainPage(),
+        '/MS': (context) => Mainscreen(),
+        '/EJ': (context) => EjScreen(),
         '/JW': (context) => JwScreen(),
         '/TM': (context) => TmScreen(),
         '/JH': (context) => JHScreen(),
