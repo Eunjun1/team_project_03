@@ -11,13 +11,8 @@ class _MyWidgetState extends State<Pkmno396main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text('포켓몬도감'),
-        backgroundColor: Colors.red,
-        foregroundColor: Colors.white,
-        toolbarHeight: 80,
-      ),
+      backgroundColor: Colors.red,
+      
 
       body: Padding(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
@@ -27,20 +22,25 @@ class _MyWidgetState extends State<Pkmno396main> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('images/396.webp', width: 300, height: 300),
-                Text(
-                  '찌르꼬',
-                  style: TextStyle(color: Colors.white, fontSize: 40),
+                Image.asset('images/396.webp',
+                width: 300,
+                height: 300,),
+                Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: Text('찌르꼬',
+                  style: TextStyle(color: Colors.white,
+                  fontSize: 40),),
                 ),
                 ElevatedButton(
                   onPressed: () => Navigator.pushNamed(context, '/no396'),
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0),
-                    ),
-                  ),
-                  child: Text('도감보기', style: TextStyle(fontSize: 40)),
-                ),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+                    backgroundColor: Colors.red
+                  ), 
+                  child: Text('도감열기',
+                  style: TextStyle(fontSize: 40,
+                  color: Colors.white),)
+                )
               ],
             ),
           ),
