@@ -18,15 +18,10 @@ class _Pkmno094State extends State<Pkmno094> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
-            ),
-
             Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
+              child: Image.asset('images/094small.webp', width: 70),
             ),
           ],
         ),
@@ -37,8 +32,7 @@ class _Pkmno094State extends State<Pkmno094> {
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: SimpleGestureDetector(
           onHorizontalSwipe: (direction) {
-          
-                _onHorizontalSwipe(direction);
+            _onHorizontalSwipe(direction);
           },
           child: Container(
             color: Colors.black,
@@ -62,12 +56,68 @@ class _Pkmno094State extends State<Pkmno094> {
                 Divider(color: Colors.red),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
-                  child: Container(
+                  child: SizedBox(
                     width: 350,
                     height: 250,
-                    child: Text(
-                      '보름달이 뜬 밤에 그림자가 \n멋대로 움직이면서 웃는다면\n팬텀의 소행임이 틀림없다.',
-                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    47,
+                                    34,
+                                    54,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  '고스트',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    81,
+                                    30,
+                                    116,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+
+                                onPressed: () {},
+                                child: Text(
+                                  '독',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '보름달이 뜬 밤에 그림자가 \n멋대로 움직이면서 웃는다면\n팬텀의 소행임이 틀림없다.',
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -82,20 +132,19 @@ class _Pkmno094State extends State<Pkmno094> {
   errorSnackBar() {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('마지막 페이지'),
+        content: Center(child: Text('마지막 페이지')),
         backgroundColor: Colors.red,
         duration: Duration(seconds: 1),
       ),
     );
   }
 
-
   _onHorizontalSwipe(SwipeDirection direction) {
-  if (direction == SwipeDirection.right) {
-    // right ==> left
-    Navigator.popAndPushNamed(context, '/no093');
-  }else{
-    errorSnackBar();
+    if (direction == SwipeDirection.right) {
+      // right ==> left
+      Navigator.popAndPushNamed(context, '/no093');
+    } else {
+      errorSnackBar();
+    }
   }
-}
 } //Class

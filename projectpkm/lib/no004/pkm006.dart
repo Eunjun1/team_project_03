@@ -20,18 +20,13 @@ class _Pkmno006State extends State<Pkmno006> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
-              ),
-
               Text(
                 '포켓몬 도감',
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
+                child: Image.asset('images/006small.webp', width: 70),
               ),
             ],
           ),
@@ -73,9 +68,65 @@ class _Pkmno006State extends State<Pkmno006> {
                   child: SizedBox(
                     width: 350,
                     height: 250,
-                    child: Text(
-                      '지상 1400m까지 날개를 사용해 날 수 있다. 고열의 불꽃을 내뿜는다.',
-                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    250,
+                                    103,
+                                    45,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  '불 꽃',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    153,
+                                    210,
+                                    236,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+
+                                onPressed: () {},
+                                child: Text(
+                                  '비 행',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '지상 1400m까지 날개를 사용해 날 수 있다. 고열의 불꽃을 내뿜는다.',
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
                 ),

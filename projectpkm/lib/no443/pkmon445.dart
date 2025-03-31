@@ -20,18 +20,13 @@ class _Pkmon445State extends State<Pkmon445> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
-              ),
-
               Text(
                 '포켓몬 도감',
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
+                child: Image.asset('images/445small.webp', width: 70),
               ),
             ],
           ),
@@ -75,9 +70,68 @@ class _Pkmon445State extends State<Pkmon445> {
                         child: SizedBox(
                           width: 350,
                           height: 250,
-                          child: const Text(
-                            '몸을 접고 날개를 펼치면 마치 제트기 같다. 음속으로 날 수 있다.',
-                            style: TextStyle(fontSize: 24, color: Colors.white),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: const Color.fromARGB(
+                                          255,
+                                          57,
+                                          39,
+                                          158,
+                                        ),
+                                        fixedSize: Size(100, 20),
+                                      ),
+
+                                      onPressed: () {},
+                                      child: Text(
+                                        '드래곤',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: const Color.fromARGB(
+                                          255,
+                                          100,
+                                          69,
+                                          27,
+                                        ),
+                                        fixedSize: Size(100, 20),
+                                      ),
+                                      onPressed: () {},
+                                      child: Text(
+                                        '땅',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const Text(
+                                '몸을 접고 날개를 펼치면 마치 제트기 같다. 음속으로 날 수 있다.',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -104,9 +158,9 @@ class _Pkmon445State extends State<Pkmon445> {
   ErrorMessage(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('이전 진화가 없거나 이후 진화가 없습니다.'),
+        content: Center(child: Text('이전 진화가 없거나 이후 진화가 없습니다.')),
         backgroundColor: Colors.red,
-        duration: Duration(seconds: 3),
+        duration: Duration(seconds: 2),
       ),
     );
     setState(() {});

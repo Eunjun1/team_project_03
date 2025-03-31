@@ -37,6 +37,8 @@ dependencies:
 
   # Simple Gesture Detector
   simple_gesture_detector: ^0.2.1
+  # Fade Oout Particle
+  fade_out_particle: ^1.2.2
 
 dev_dependencies:
   flutter_test:

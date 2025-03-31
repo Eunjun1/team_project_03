@@ -20,18 +20,13 @@ class _Pkmno005State extends State<Pkmno005> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
-              ),
-
               Text(
                 '포켓몬 도감',
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
+                child: Image.asset('images/005small.webp', width: 70),
               ),
             ],
           ),
@@ -73,9 +68,41 @@ class _Pkmno005State extends State<Pkmno005> {
                   child: SizedBox(
                     width: 350,
                     height: 250,
-                    child: Text(
-                      '꼬리를 휘둘러 상대를 쓰러트리고 날카로운 발톱으로 갈기갈기 찢어버린다.',
-                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    250,
+                                    103,
+                                    45,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  '불 꽃',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '꼬리를 휘둘러 상대를 쓰러트리고 날카로운 발톱으로 갈기갈기 찢어버린다.',
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
                 ),

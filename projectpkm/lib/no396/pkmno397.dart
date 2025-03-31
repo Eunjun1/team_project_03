@@ -20,18 +20,13 @@ class _Pkmno397State extends State<Pkmno397> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
-              ),
-
               Text(
                 '포켓몬 도감',
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
+                child: Image.asset('images/397small.webp', width: 70),
               ),
             ],
           ),
@@ -67,9 +62,65 @@ class _Pkmno397State extends State<Pkmno397> {
                   child: SizedBox(
                     width: 350,
                     height: 250,
-                    child: Text(
-                      '숲이나 초원에 서식한다. 그룹이 마주치면 영역을 건 분쟁이 시작된다.',
-                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    110,
+                                    110,
+                                    110,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  '노 말',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    153,
+                                    210,
+                                    236,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+
+                                onPressed: () {},
+                                child: Text(
+                                  '비 행',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '숲이나 초원에 서식한다. 그룹이 마주치면 영역을 건 분쟁이 시작된다.',
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
                 ),
