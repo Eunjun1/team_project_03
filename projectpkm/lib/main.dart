@@ -3,12 +3,15 @@ import 'package:projectpkm/no004/pkm004.dart';
 import 'package:projectpkm/no004/pkm005.dart';
 import 'package:projectpkm/no004/pkm006.dart';
 import 'package:projectpkm/no066/pkm066.dart';
+import 'package:projectpkm/no066/pkm066main.dart';
 import 'package:projectpkm/no066/pkm067.dart';
 import 'package:projectpkm/no066/pkm068.dart';
+import 'package:projectpkm/no092/pkmno092main.dart';
 import 'package:projectpkm/no092/pkmon092.dart';
 import 'package:projectpkm/no092/pkmon093.dart';
 import 'package:projectpkm/no092/pkmon094.dart';
 import 'package:projectpkm/no396/pkmno396.dart';
+import 'package:projectpkm/no396/pkmno396main.dart';
 import 'package:projectpkm/no396/pkmno397.dart';
 import 'package:projectpkm/no396/pkmno398.dart';
 import 'package:projectpkm/no443/pkmno443main.dart';
@@ -36,6 +39,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/showhome': (context) => Showhome(),
         '/444main': (context) => Pkmno443Main(),
+        '/396main': (context) => Pkmno396main(),
+        '/092main': (context) => Pkmno092main(),
+        '/444main': (context) => Pkmno443Main(),
+        '/066main': (context) => Pkm066main(),
         '/no396': (context) => Pkmno396(), // 1tab
         '/no397': (context) => Pkmno397(),
         '/no398': (context) => Pkmno398(),

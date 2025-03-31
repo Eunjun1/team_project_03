@@ -16,6 +16,7 @@ class _Pkm68State extends State<Pkm068> {
     super.initState();
     pokemon = 'images/068.jpeg';
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,44 +45,49 @@ class _Pkm68State extends State<Pkm068> {
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: SimpleGestureDetector(
           onHorizontalSwipe: (direction) {
-            direction == SwipeDirection.left 
-            ? ErrorMessage(context)
-            : Navigator.pop(context);
+            direction == SwipeDirection.left
+                ? ErrorMessage(context)
+                : Navigator.popAndPushNamed(context, '/no067');
           },
           child: GestureDetector(
             onDoubleTap: () {
               pokemon == 'images/068.jpeg'
-              ? pokemon = 'images/068_1.webp'
-              : pokemon = 'images/068.jpeg';
+                  ? pokemon = 'images/068_1.webp'
+                  : pokemon = 'images/068.jpeg';
 
-              setState(() {});},
+              setState(() {});
+            },
             child: Container(
               color: Colors.black,
               child: Column(
                 children: [
-                  Text('no.068 괴력몬',
-                  style: TextStyle(fontSize: 40,
-                  color: Colors.white)),
-                  Image.asset(pokemon,height: 200,),
-                  Text('괴력포켓몬',
-                  style: TextStyle(fontSize: 40,
-                  color: Colors.white),
-                  textAlign: TextAlign.left),
-                  Text('키 : 1.6m 몸무게 : 130kg',
-                  style: TextStyle(fontSize: 20,
-                  color: Colors.white),
-                  textAlign: TextAlign.left),
+                  Text(
+                    'no.068 괴력몬',
+                    style: TextStyle(fontSize: 40, color: Colors.white),
+                  ),
+                  Image.asset(pokemon, height: 200),
+                  Text(
+                    '괴력포켓몬',
+                    style: TextStyle(fontSize: 40, color: Colors.white),
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    '키 : 1.6m 몸무게 : 130kg',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    textAlign: TextAlign.left,
+                  ),
                   Divider(color: Colors.red),
                   Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: SizedBox(
                       width: 350,
                       height: 250,
-                      child: Text('발달한 4개의 팔은 2초 동안 1000번의 펀치를 날릴 수 있다.',
-                      style: TextStyle(fontSize: 24,
-                      color: Colors.white),),
+                      child: Text(
+                        '발달한 4개의 팔은 2초 동안 1000번의 펀치를 날릴 수 있다.',
+                        style: TextStyle(fontSize: 24, color: Colors.white),
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -90,13 +96,14 @@ class _Pkm68State extends State<Pkm068> {
       ),
     );
   }
-  ErrorMessage(BuildContext context){
+
+  ErrorMessage(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('이전 진화가 없거나 이후 진화가 없습니다.'),
         backgroundColor: Colors.red,
         duration: Duration(seconds: 3),
-      )
+      ),
     );
     setState(() {});
   }
