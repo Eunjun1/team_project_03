@@ -18,15 +18,10 @@ class _Pkmno093State extends State<Pkmno093> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
-            ),
-
             Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
+              child: Image.asset('images/093small.webp', width: 70),
             ),
           ],
         ),
@@ -39,7 +34,7 @@ class _Pkmno093State extends State<Pkmno093> {
           onHorizontalSwipe: (direction) {
             direction == SwipeDirection.left
                 ? Navigator.popAndPushNamed(context, '/no094')
-                : Navigator.popAndPushNamed(context,'/no092');
+                : Navigator.popAndPushNamed(context, '/no092');
           },
           child: Container(
             color: Colors.black,
@@ -63,12 +58,68 @@ class _Pkmno093State extends State<Pkmno093> {
                 Divider(color: Colors.red),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
-                  child: Container(
+                  child: SizedBox(
                     width: 350,
                     height: 250,
-                    child: Text(
-                      '어둠 속에서 아무도 없는데 \n누군가 보고 있다는 느낌이 들면 \n그곳에 고우스트가 있는 것이다.',
-                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    47,
+                                    34,
+                                    54,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  '고스트',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    81,
+                                    30,
+                                    116,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+
+                                onPressed: () {},
+                                child: Text(
+                                  '독',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '어둠 속에서 아무도 없는데 \n누군가 보고 있다는 느낌이 들면 \n그곳에 고우스트가 있는 것이다.',
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
                 ),

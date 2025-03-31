@@ -18,15 +18,10 @@ class _Pkmno092State extends State<Pkmno092> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
-            ),
-
             Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
+              child: Image.asset('images/092small.webp', width: 70),
             ),
           ],
         ),
@@ -63,9 +58,65 @@ class _Pkmno092State extends State<Pkmno092> {
                 Divider(color: Colors.red),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '흐릿한 가스 상태의 생명체. \n가스에 휘감기면 인도코끼리조차 \n2초 안에 쓰러진다',
-                    style: TextStyle(fontSize: 24, color: Colors.white),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  47,
+                                  34,
+                                  54,
+                                ),
+                                fixedSize: Size(100, 20),
+                              ),
+                              onPressed: () {},
+                              child: Text(
+                                '고스트',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  81,
+                                  30,
+                                  116,
+                                ),
+                                fixedSize: Size(100, 20),
+                              ),
+
+                              onPressed: () {},
+                              child: Text(
+                                '독',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        '흐릿한 가스 상태의 생명체. \n가스에 휘감기면 인도코끼리조차 \n2초 안에 쓰러진다',
+                        style: TextStyle(fontSize: 24, color: Colors.white),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -79,7 +130,7 @@ class _Pkmno092State extends State<Pkmno092> {
   errorSnackBar() {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('첫 페이지'),
+        content: Center(child: Text('첫 페이지')),
         backgroundColor: Colors.red,
         duration: Duration(seconds: 1),
       ),

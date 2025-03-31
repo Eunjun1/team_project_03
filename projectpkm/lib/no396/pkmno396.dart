@@ -20,18 +20,13 @@ class _Pkmno396State extends State<Pkmno396> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
-              ),
-
               Text(
                 '포켓몬 도감',
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Image.asset('images/pokeball.png', width: 20),
+                child: Image.asset('images/396small.webp', width: 70),
               ),
             ],
           ),
@@ -67,9 +62,65 @@ class _Pkmno396State extends State<Pkmno396> {
                   child: SizedBox(
                     width: 350,
                     height: 250,
-                    child: Text(
-                      '평소에는 무리로 살고있지만 1마리가 되면 눈에 띄지 않는다. 울음소리가 무척 시끄럽다.',
-                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    110,
+                                    110,
+                                    110,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  '노 말',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    153,
+                                    210,
+                                    236,
+                                  ),
+                                  fixedSize: Size(100, 20),
+                                ),
+
+                                onPressed: () {},
+                                child: Text(
+                                  '비 행',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          '평소에는 무리로 살고있지만 1마리가 되면 눈에 띄지 않는다. 울음소리가 무척 시끄럽다.',
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
                 ),

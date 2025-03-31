@@ -18,15 +18,10 @@ class _Pkmon444State extends State<Pkmon444> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
-            ),
-
             Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
+              child: Image.asset('images/444small.webp', width: 70),
             ),
           ],
         ),
@@ -70,9 +65,68 @@ class _Pkmon444State extends State<Pkmon444> {
                         child: SizedBox(
                           width: 350,
                           height: 250,
-                          child: const Text(
-                            '반짝반짝 빛나는 것을 아주 좋아하기에 동굴 안에서 발견한 보물을 자신의 둥지에 모아둔다.',
-                            style: TextStyle(fontSize: 24, color: Colors.white),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: const Color.fromARGB(
+                                          255,
+                                          57,
+                                          39,
+                                          158,
+                                        ),
+                                        fixedSize: Size(100, 20),
+                                      ),
+
+                                      onPressed: () {},
+                                      child: Text(
+                                        '드래곤',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: const Color.fromARGB(
+                                          255,
+                                          100,
+                                          69,
+                                          27,
+                                        ),
+                                        fixedSize: Size(100, 20),
+                                      ),
+                                      onPressed: () {},
+                                      child: Text(
+                                        '땅',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const Text(
+                                '반짝반짝 빛나는 것을 아주 좋아하기에 동굴 안에서 발견한 보물을 자신의 둥지에 모아둔다.',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
