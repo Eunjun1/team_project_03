@@ -32,7 +32,10 @@ class _Pkmno443nameState extends State<Pkmno443Main> {
                 backgroundColor: Colors.red,
               ),
               onPressed: () => Navigator.pushNamed(context, '/no443'),
-              child: Text('도감 열기', style: TextStyle(color: Colors.white)),
+              child: Text(
+                '도감 열기',
+                style: TextStyle(color: Colors.white, fontSize: 40),
+              ),
             ),
           ],
         ),

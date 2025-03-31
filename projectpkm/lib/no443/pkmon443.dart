@@ -93,7 +93,18 @@ class _Pkmon443State extends State<Pkmon443> {
       // right ==> left
       Navigator.popAndPushNamed(context, '/no444');
     } else {
-      Navigator.pop(context);
+      ErrorMessage(context);
     }
+  }
+
+  ErrorMessage(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('이전 진화가 없거나 이후 진화가 없습니다.'),
+        backgroundColor: Colors.red,
+        duration: Duration(seconds: 3),
+      ),
+    );
+    setState(() {});
   }
 }

@@ -48,7 +48,7 @@ class _ShowhomeState extends State<Showhome>
             ),
           ],
         ),
-        backgroundColor: Color.fromARGB(255, 201, 47, 36),
+        backgroundColor: Colors.red,
         foregroundColor: Colors.black,
       ),
 
@@ -57,7 +57,7 @@ class _ShowhomeState extends State<Showhome>
         children: [
           Pkmno396main(),
           Pkmno092main(),
-          Pkm004main(),
+          Pkmno004main(),
           Pkmno443Main(),
           Pkm066main(),
         ],

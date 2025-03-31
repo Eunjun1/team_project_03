@@ -28,8 +28,16 @@ class _Pkmno092mainState extends State<Pkmno092main> {
               onPressed: () {
                 Navigator.pushNamed(context, '/no092');
               },
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-              child: Text("도감 열기", style: TextStyle(color: Colors.white)),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+              ),
+              child: Text(
+                "도감 열기",
+                style: TextStyle(color: Colors.white, fontSize: 40),
+              ),
             ),
           ],
         ),

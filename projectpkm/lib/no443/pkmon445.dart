@@ -14,21 +14,27 @@ class _Pkmon445State extends State<Pkmon445> {
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
+        centerTitle: true,
         toolbarHeight: 70,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
-            ),
+        title: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Image.asset('images/pokeball.png', width: 20),
+              ),
 
-            Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset('images/pokeball.png', width: 20),
-            ),
-          ],
+              Text(
+                '포켓몬 도감',
+                style: TextStyle(fontSize: 40, color: Colors.white),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Image.asset('images/pokeball.png', width: 20),
+              ),
+            ],
+          ),
         ),
         backgroundColor: Colors.red,
         foregroundColor: Colors.black,
@@ -90,6 +96,19 @@ class _Pkmon445State extends State<Pkmon445> {
     if (direction == SwipeDirection.right) {
       // right ==> left
       Navigator.popAndPushNamed(context, '/no444');
+    } else {
+      ErrorMessage(context);
     }
+  }
+
+  ErrorMessage(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('이전 진화가 없거나 이후 진화가 없습니다.'),
+        backgroundColor: Colors.red,
+        duration: Duration(seconds: 3),
+      ),
+    );
+    setState(() {});
   }
 }

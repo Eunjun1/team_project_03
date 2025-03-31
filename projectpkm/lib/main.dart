@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         '/444main': (context) => Pkmno443Main(),
         '/396main': (context) => Pkmno396main(),
         '/092main': (context) => Pkmno092main(),
-        '/004main': (context) => Pkm004main(),
+        '/004main': (context) => Pkmno004main(),
         '/066main': (context) => Pkm066main(),
         '/no396': (context) => Pkmno396(), // 1tab
         '/no397': (context) => Pkmno397(),
