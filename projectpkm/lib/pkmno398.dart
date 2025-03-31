@@ -64,7 +64,10 @@ class _Pkmno398State extends State<Pkmno398> {
             actions: [
               Center(
                 child: TextButton(
-                  onPressed: () => Navigator.pop(context), 
+                  onPressed: (){ 
+                    Navigator.pop(context);
+                    Navigator.pop(context);
+                    }, 
                   child: Text('알겠습니다.',
                   style: TextStyle(color: Colors.blue,
                   fontWeight: FontWeight.bold),)
