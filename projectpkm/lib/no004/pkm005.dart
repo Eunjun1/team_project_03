@@ -23,7 +23,7 @@ class _Pkmno005State extends State<Pkmno005> {
         child: SimpleGestureDetector(
           onHorizontalSwipe: (direction) {
             direction == SwipeDirection.left
-            ? Navigator.pushNamed(context, '/no006')
+            ? Navigator.popAndPushNamed(context, '/no006')
             : Navigator.pop(context);
           },
           child: Container(
