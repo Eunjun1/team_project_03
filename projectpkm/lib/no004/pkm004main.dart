@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Pkm004main extends StatefulWidget {
-  const Pkm004main({super.key});
+class Pkmno004main extends StatefulWidget {
+  const Pkmno004main({super.key});
 
   @override
-  State<Pkm004main> createState() => _Pkm004mainState();
+  State<Pkmno004main> createState() => _Pkmno004mainState();
 }
 
-class _Pkm004mainState extends State<Pkm004main> {
+class _Pkmno004mainState extends State<Pkmno004main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +16,23 @@ class _Pkm004mainState extends State<Pkm004main> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset("images/pkm004.webp"),
-            Text("파이리"),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text(
+                "파이리",
+                style: TextStyle(
+                  fontSize: 40
+                ),
+              ),
+            ),
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/no004'), 
-              child: Text("도감열기")
+              child: Text(
+                "도감열기",
+                style: TextStyle(
+                  fontSize: 40
+                ),
+              )
             )
           ],
         ),

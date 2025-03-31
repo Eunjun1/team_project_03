@@ -34,14 +34,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: '/showhome',
+      initialRoute: '/004main',
 
       routes: {
         '/showhome': (context) => Showhome(),
         '/444main': (context) => Pkmno443Main(),
         '/396main': (context) => Pkmno396main(),
         '/092main': (context) => Pkmno092main(),
-        '/444main': (context) => Pkmno443Main(),
+        '/443main': (context) => Pkmno443Main(),
         '/066main': (context) => Pkm066main(),
         '/no396': (context) => Pkmno396(), // 1tab
         '/no397': (context) => Pkmno397(),
