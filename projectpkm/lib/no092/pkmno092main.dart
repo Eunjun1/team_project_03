@@ -15,10 +15,10 @@ class _Pkmno092mainState extends State<Pkmno092main> {
         child: Column(
           children: [
             Image.asset('images/092.png', width: 300),
-            Text("고오스"),
+            Text("고오스",style: TextStyle(fontSize: 40),),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/no092');
+                Navigator.pushNamed(context, '/no092',);
               },
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               child: Text("도감보기", style: TextStyle(color: Colors.white)),
