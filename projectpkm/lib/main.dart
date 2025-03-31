@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projectpkm/no004/pkm004.dart';
+import 'package:projectpkm/no004/pkm004main.dart';
 import 'package:projectpkm/no004/pkm005.dart';
 import 'package:projectpkm/no004/pkm006.dart';
 import 'package:projectpkm/no066/pkm066.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
         '/444main': (context) => Pkmno443Main(),
         '/396main': (context) => Pkmno396main(),
         '/092main': (context) => Pkmno092main(),
-        '/444main': (context) => Pkmno443Main(),
+        '/004main': (context) => Pkm004main(),
         '/066main': (context) => Pkm066main(),
         '/no396': (context) => Pkmno396(), // 1tab
         '/no397': (context) => Pkmno397(),

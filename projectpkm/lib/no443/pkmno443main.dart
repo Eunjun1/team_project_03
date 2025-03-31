@@ -14,11 +14,23 @@ class _Pkmno443nameState extends State<Pkmno443Main> {
       backgroundColor: Colors.black,
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('images/443.webp', width: 300),
-            Text('딥상어동', style: TextStyle(color: Colors.white)),
+            Image.asset('images/443.webp', width: 300, height: 300),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text(
+                '딥상어동',
+                style: TextStyle(color: Colors.white, fontSize: 40),
+              ),
+            ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+                backgroundColor: Colors.red,
+              ),
               onPressed: () => Navigator.pushNamed(context, '/no443'),
               child: Text('도감 열기', style: TextStyle(color: Colors.white)),
             ),

@@ -15,12 +15,12 @@ class _Pkm004mainState extends State<Pkm004main> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("images/pkm004.webp"),
+            Image.asset("images/004.webp"),
             Text("파이리"),
             ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, '/no004'), 
-              child: Text("도감열기")
-            )
+              onPressed: () => Navigator.pushNamed(context, '/no004'),
+              child: Text("도감열기"),
+            ),
           ],
         ),
       ),

@@ -19,7 +19,6 @@ class _MyWidgetState extends State<Pkmno396main> {
         toolbarHeight: 80,
       ),
 
-
       body: Padding(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: Container(
@@ -28,20 +27,20 @@ class _MyWidgetState extends State<Pkmno396main> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('images/396.webp',
-                width: 300,
-                height: 300,),
-                Text('찌르꼬',
-                style: TextStyle(color: Colors.white,
-                fontSize: 40),),
+                Image.asset('images/396.webp', width: 300, height: 300),
+                Text(
+                  '찌르꼬',
+                  style: TextStyle(color: Colors.white, fontSize: 40),
+                ),
                 ElevatedButton(
                   onPressed: () => Navigator.pushNamed(context, '/no396'),
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-                  ), 
-                  child: Text('도감보기',
-                  style: TextStyle(fontSize: 40),)
-                )
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(0),
+                    ),
+                  ),
+                  child: Text('도감보기', style: TextStyle(fontSize: 40)),
+                ),
               ],
             ),
           ),

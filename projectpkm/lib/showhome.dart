@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projectpkm/no004/pkm004.dart';
+import 'package:projectpkm/no004/pkm004main.dart';
 import 'package:projectpkm/no066/pkm066main.dart';
 import 'package:projectpkm/no092/pkmno092main.dart';
 import 'package:projectpkm/no396/pkmno396main.dart';
@@ -48,7 +48,7 @@ class _ShowhomeState extends State<Showhome>
             ),
           ],
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Color.fromARGB(255, 201, 47, 36),
         foregroundColor: Colors.black,
       ),
 
@@ -57,22 +57,25 @@ class _ShowhomeState extends State<Showhome>
         children: [
           Pkmno396main(),
           Pkmno092main(),
-          Pkmno004(),
+          Pkm004main(),
           Pkmno443Main(),
           Pkm066main(),
         ],
       ),
 
-      bottomNavigationBar: TabBar(
-        controller: controller,
+      bottomNavigationBar: Container(
+        color: Colors.red,
+        child: TabBar(
+          controller: controller,
 
-        tabs: [
-          Tab(icon: Icon(Icons.radio_button_on)),
-          Tab(icon: Icon(Icons.radio_button_on)),
-          Tab(icon: Icon(Icons.radio_button_on)),
-          Tab(icon: Icon(Icons.radio_button_on)),
-          Tab(icon: Icon(Icons.radio_button_on)),
-        ],
+          tabs: [
+            Tab(icon: Image.asset('images/396.webp', width: 30), height: 60),
+            Tab(icon: Image.asset('images/092.png', width: 30)),
+            Tab(icon: Image.asset('images/004.webp', width: 30)),
+            Tab(icon: Image.asset('images/443.webp', width: 30)),
+            Tab(icon: Image.asset('images/066.png', width: 30)),
+          ],
+        ),
       ),
     );
   }
