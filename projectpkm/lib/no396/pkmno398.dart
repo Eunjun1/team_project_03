@@ -3,7 +3,6 @@ import 'package:simple_gesture_detector/simple_gesture_detector.dart';
 
 class Pkmno398 extends StatefulWidget {
   const Pkmno398({super.key});
-
   @override
   State<Pkmno398> createState() => _Pkmno398State();
 }
