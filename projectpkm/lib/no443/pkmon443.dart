@@ -71,6 +71,8 @@ class _Pkmon443State extends State<Pkmon443> {
     if (direction == SwipeDirection.left) {
       // right ==> left
       Navigator.popAndPushNamed(context, '/no444');
+    } else {
+      Navigator.popAndPushNamed(context, '/showhome');
     }
   }
 }

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:projectpkm/no004/pkm004.dart';
+import 'package:projectpkm/no066/pkm066.dart';
+import 'package:projectpkm/no092/pkmon092.dart';
+import 'package:projectpkm/no396/pkmno396.dart';
 import 'package:projectpkm/no443/pkmon443.dart';
 
 class Showhome extends StatefulWidget {
@@ -50,13 +54,7 @@ class _ShowhomeState extends State<Showhome>
 
       body: TabBarView(
         controller: controller,
-        children: [
-          //Pkmno396(),
-          //Pkmno092(),
-          //Pkmno004(),
-          Pkmon443(),
-          //Pkmno066(),
-        ],
+        children: [Pkmno396(), Pkmno092(), Pkmno004(), Pkmon443(), Pkm066()],
       ),
 
       bottomNavigationBar: TabBar(
