@@ -13,6 +13,12 @@ class _Pkmno398State extends State<Pkmno398> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
+      appBar: AppBar(
+        title: Text('포켓몬도감'),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        toolbarHeight: 80,
+      ),
       
       body: SimpleGestureDetector(
         onHorizontalSwipe: (direction) => _onHorizontalSwipe(direction, context),

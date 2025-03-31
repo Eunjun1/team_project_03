@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({super.key});
+class Pkmno396main extends StatefulWidget {
+  const Pkmno396main({super.key});
 
   @override
-  State<Profile> createState() => _MyWidgetState();
+  State<Pkmno396main> createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<Profile> {
+class _MyWidgetState extends State<Pkmno396main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text('포켓몬도감'),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        toolbarHeight: 80,
+      ),
 
 
       body: Padding(
