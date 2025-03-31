@@ -13,22 +13,26 @@ class _Pkmno092State extends State<Pkmno092> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
+      appBar: AppBar(
+        toolbarHeight: 70,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
 
-      // appBar: AppBar(
-      //   toolbarHeight: 107,
-      //   title: Row(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-      //       // Image.asset('images/pkmno396.webp'),
-      //       Text('포켓몬 도감',
-      //       style: TextStyle(fontSize: 40,
-      //       color: Colors.white)),
-      //       // Image.asset('images/pkmno396.webp'),
-      //     ],
-      //   ),
-      //   backgroundColor: Colors.red,
-      //   foregroundColor: Colors.black
-      // ),
+            Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.black,
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: SimpleGestureDetector(
@@ -45,7 +49,7 @@ class _Pkmno092State extends State<Pkmno092> {
                   'no.092 고오스',
                   style: TextStyle(fontSize: 40, color: Colors.white),
                 ),
-                Image.asset('images/092.png',width: 200,),
+                Image.asset('images/092.png', width: 200),
                 Text(
                   '가스 포켓몬',
                   style: TextStyle(fontSize: 40, color: Colors.white),

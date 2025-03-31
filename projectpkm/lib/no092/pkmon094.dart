@@ -13,29 +13,33 @@ class _Pkmno094State extends State<Pkmno094> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
+      appBar: AppBar(
+        toolbarHeight: 70,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
 
-      // appBar: AppBar(
-      //   toolbarHeight: 107,
-      //   title: Row(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-      //       // Image.asset('images/pkmno396.webp'),
-      //       Text('포켓몬 도감',
-      //       style: TextStyle(fontSize: 40,
-      //       color: Colors.white)),
-      //       // Image.asset('images/pkmno396.webp'),
-      //     ],
-      //   ),
-      //   backgroundColor: Colors.red,
-      //   foregroundColor: Colors.black
-      // ),
+            Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.black,
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: SimpleGestureDetector(
           onHorizontalSwipe: (direction) {
-            direction == SwipeDirection.left          
-            ? errorSnackBar()
-            : Navigator.pop(context);
+            direction == SwipeDirection.left
+                ? errorSnackBar()
+                : Navigator.pop(context);
           },
           child: Container(
             color: Colors.black,
@@ -45,7 +49,7 @@ class _Pkmno094State extends State<Pkmno094> {
                   'no.094 팬텀',
                   style: TextStyle(fontSize: 40, color: Colors.white),
                 ),
-                Image.asset('images/094.png',width: 200,),
+                Image.asset('images/094.png', width: 200),
                 Text(
                   '가스 포켓몬',
                   style: TextStyle(fontSize: 40, color: Colors.white),
@@ -74,16 +78,15 @@ class _Pkmno094State extends State<Pkmno094> {
         ),
       ),
     );
-  }//build
-  errorSnackBar(){
+  } //build
+
+  errorSnackBar() {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(
-        '마지막 페이지'
-      ),
-      backgroundColor: Colors.red,
-      duration: Duration(seconds: 1),
+      SnackBar(
+        content: Text('마지막 페이지'),
+        backgroundColor: Colors.red,
+        duration: Duration(seconds: 1),
       ),
     );
   }
-
-}//Class
+} //Class

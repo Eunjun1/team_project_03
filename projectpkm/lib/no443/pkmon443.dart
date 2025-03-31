@@ -14,6 +14,27 @@ class _Pkmon443State extends State<Pkmon443> {
     return Scaffold(
       backgroundColor: Colors.red,
 
+      appBar: AppBar(
+        toolbarHeight: 70,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
+
+            Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.black,
+      ),
+
       body: SimpleGestureDetector(
         onHorizontalSwipe: (direction) => onHorizontalSwipe(direction),
         child: Container(
@@ -72,7 +93,7 @@ class _Pkmon443State extends State<Pkmon443> {
       // right ==> left
       Navigator.popAndPushNamed(context, '/no444');
     } else {
-      Navigator.popAndPushNamed(context, '/showhome');
+      Navigator.pop(context);
     }
   }
 }
