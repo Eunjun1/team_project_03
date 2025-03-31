@@ -37,9 +37,8 @@ class _Pkmno094State extends State<Pkmno094> {
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: SimpleGestureDetector(
           onHorizontalSwipe: (direction) {
-            direction == SwipeDirection.left
-                ? errorSnackBar()
-                : Navigator.pop(context);
+          
+                _onHorizontalSwipe(direction);
           },
           child: Container(
             color: Colors.black,
@@ -89,4 +88,14 @@ class _Pkmno094State extends State<Pkmno094> {
       ),
     );
   }
+
+
+  _onHorizontalSwipe(SwipeDirection direction) {
+  if (direction == SwipeDirection.right) {
+    // right ==> left
+    Navigator.popAndPushNamed(context, '/no093');
+  }else{
+    errorSnackBar();
+  }
+}
 } //Class
