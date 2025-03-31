@@ -8,12 +8,7 @@ class SbScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 183, 101),
       appBar: AppBar(
-        title: Text(
-          "4번남 소개",
-          style: TextStyle(
-            fontWeight: FontWeight.bold
-          ),
-        ),
+        title: Text("4번남 소개", style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: const Color.fromARGB(255, 166, 55, 213),
         foregroundColor: Colors.white,
       ),
@@ -23,78 +18,79 @@ class SbScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image.asset(
-                "images/pig.jpg",
-                width: 200,
-              ),
+              child: Image.asset("images/pig.jpg", width: 200),
             ),
-            SizedBox(
-              width: 300,
-              height: 50,
-            ),
+            SizedBox(width: 300, height: 50),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
                 "이름 : 위성배",
-                style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
                 "나이 : 1992년생(34)",
-                style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
                 "사는곳 : 서초구 양재동",
-                style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
               child: Text(
                 "전공 : 외식경영",
-                style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(5, 15, 5, 30),
               child: Text(
                 "'비전공자라 열심히 하겠습니다. 화이팅'",
-                style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: ElevatedButton(
-                onPressed: () => Navigator.pop(context), 
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 166, 55, 213),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.popAndPushNamed(context, '/JH'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    child: Text(
+                      "이전 멤버",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                  ),
                 ),
-                child: Text("메인으로",
-                style: TextStyle(
-                  color: Colors.white
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.popAndPushNamed(context, '/MS'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    child: Text(
+                      "메인으로",
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                  ),
                 ),
-                ),
-                ),
+              ],
             ),
           ],
         ),
