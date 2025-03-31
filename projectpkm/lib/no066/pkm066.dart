@@ -21,6 +21,26 @@ class _Pkm66State extends State<Pkm066> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
+      appBar: AppBar(
+        toolbarHeight: 70,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
+
+            Text('포켓몬 도감', style: TextStyle(fontSize: 40, color: Colors.white)),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/pokeball.png', width: 20),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.black,
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: SimpleGestureDetector(
