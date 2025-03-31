@@ -11,6 +11,7 @@ import 'package:projectpkm/no092/pkmon094.dart';
 import 'package:projectpkm/no396/pkmno396.dart';
 import 'package:projectpkm/no396/pkmno397.dart';
 import 'package:projectpkm/no396/pkmno398.dart';
+import 'package:projectpkm/no443/pkmno443main.dart';
 import 'package:projectpkm/no443/pkmon443.dart';
 import 'package:projectpkm/no443/pkmon444.dart';
 import 'package:projectpkm/no443/pkmon445.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
 
       routes: {
         '/showhome': (context) => Showhome(),
+        '/444main': (context) => Pkmno443Main(),
         '/no396': (context) => Pkmno396(), // 1tab
         '/no397': (context) => Pkmno397(),
         '/no398': (context) => Pkmno398(),
