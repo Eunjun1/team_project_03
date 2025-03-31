@@ -13,6 +13,7 @@ class _Pkmno092mainState extends State<Pkmno092main> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('images/092.png', width: 300),
             Text("고오스",style: TextStyle(fontSize: 40),),
