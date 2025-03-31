@@ -13,6 +13,11 @@ class _Pkmno005State extends State<Pkmno005> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        title: Text("포켓몬 도감"),
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         child: SimpleGestureDetector(
@@ -28,7 +33,7 @@ class _Pkmno005State extends State<Pkmno005> {
                 Text('no.005 리자드',
                 style: TextStyle(fontSize: 40,
                 color: Colors.white)),
-                Image.asset('images/005.jpeg', height: 200),
+                Image.asset('images/005.webp', height: 200),
                 Text('화염 포켓몬',
                 style: TextStyle(fontSize: 40,
                 color: Colors.white),
