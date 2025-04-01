@@ -40,21 +40,17 @@ class _MyWidgetState extends State<Pkmno396main> {
 
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
-    final double screenWidth = screenSize.width;
-    final double screenHeight = screenSize.height;
     return Scaffold(
       body: SimpleGestureDetector(
         onTap: () => _onTap(),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Stack(
                 children: [
                   Container(
                     width: 600,
-                    height: 800,
+                    height: 661,
                     color: Colors.black,
                     child: Center(
                       child: Column(
@@ -97,12 +93,17 @@ class _MyWidgetState extends State<Pkmno396main> {
                     ),
                   ),
                   Positioned(
-                    right: 56.5,
-                    top: 180,
+                    right: 46,
+                    top: 100,
                     child: Container(
+                      height: 400,
+                      width: 300,
                       child: FadeOutParticle(
                         disappear: disApper,
-                        child: Image.asset('images/card_back.png', width: 300),
+                        child: Image.asset(
+                          'images/card_back.png',
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                   ),
@@ -126,7 +127,6 @@ class _MyWidgetState extends State<Pkmno396main> {
       if (current >= pkmImg.length) {
         current = 0;
       }
-      setState(() {});
     });
     setState(() {});
   }
